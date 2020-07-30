@@ -7,23 +7,24 @@
         <link rel="stylesheet" href="css/styles.css">
     </head>
     <body>
-        <div class="container"></div>
-        <div class="row main-container" id="main_container">
-            <div class="col-lg-12">
-                <div class="login-styles">
-                    <img class="logo mb-4" src="images/Logo.svg" alt="KnowledgeCity">
-                    <h6 class="my-0">Welcome to the learning Management System</h6>
-                    <p class="mb-4">Please log in to continue</p>
-                    <input class="login-input username mb-2" type="text" id="username" placeholder="Username">
-                    <input class="login-input password mb-2" type="text" id="password" placeholder="Password">
-                    <input type="checkbox" value="lsRememberMe" id="rememberMe" class="mb-4"> <label for="rememberMe">Remember me</label>
-                    <input type="submit" id="login" class="login" value="Log in">
+        <div class="container">
+            <div class="row main-container" id="main_container">
+                <div class="col-lg-12">
+                    <div class="login-styles">
+                        <img class="logo mb-4" src="images/Logo.svg" alt="KnowledgeCity">
+                        <h6 class="my-0">Welcome to the learning Management System</h6>
+                        <p class="mb-4">Please log in to continue</p>
+                        <input class="login-input username mb-2" type="text" id="username" placeholder="Username">
+                        <input class="login-input password mb-2" type="password" id="password" placeholder="Password">
+                        <input type="checkbox" value="lsRememberMe" id="rememberMe" class="mb-5"> <label for="rememberMe">Remember me</label>
+                        <input type="submit" id="login" class="loginBtn" value="Log in">
+                    </div>
                 </div>
             </div>
         </div>
     </body>
     <footer></footer>
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
     <script src="js/functions.js"></script>
@@ -41,7 +42,7 @@ var username=$("#username").val();
 var password=$("#password").val();
 
 if(username === validUsername && password === validPassword){
-    window.location.href = "/userlist.html";
+    window.location.href = "userlist.html";
 }
 else{
     alert('Wrong Credentials');

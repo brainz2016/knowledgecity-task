@@ -1,20 +1,19 @@
-const rmCheck = document.getElementById("rememberMe"),
-emailInput = document.getElementById("email");
+$(document).ready(() => {
+  $.getJSON("./userlist.json")
+  .done(function(data){
+    console.log(data);
+    const table = data.users.map(m => {
+      return `<tr><td><i class="fas fa-check-circle"></i></td><td>${m.username} </td><td>${m.name}</td><td>${m.group}</td></tr>`
+    })
+    $('#tableBody').html(table);
+    $('#usersTable').DataTable({
+      "searching": false,
+      "ordering": false
+      });
+    $('.dataTables_length').addClass('bs-select');
+   
+    
+  })
+  
+});
 
-if (localStorage.checkbox && localStorage.checkbox !== "") {
-  rmCheck.setAttribute("checked", "checked");
-  emailInput.value = localStorage.username;
-} else {
-  rmCheck.removeAttribute("checked");
-  emailInput.value = "";
-}
-
-function lsRememberMe() {
-  if (rmCheck.checked && emailInput.value !== "") {
-    localStorage.username = emailInput.value;
-    localStorage.checkbox = rmCheck.value;
-  } else {
-    localStorage.username = "";
-    localStorage.checkbox = "";
-  }
-}

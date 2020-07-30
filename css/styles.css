@@ -16,6 +16,20 @@ html, body{
     transform: translate(-50%, -50%);
 }
 
+.panel-container{
+    /* position: absolute; */
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    /* top: 20%; */
+    /* left: 50%; */
+    /* -webkit-transform: translate(-50%, -50%); */
+    -ms-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    /* transform: translate(-50%, -50%); */
+}
+
 .login-styles{
     width: 100%;
     max-width: 500px;
@@ -33,6 +47,12 @@ html, body{
     padding: 11px 10px 10px 40px;
 }
 
+.login-input:hover, .login-input:active, .login-input:focus{
+    outline: none;
+   
+}
+
+
 .username{
     background: url(../images/user.svg) no-repeat scroll 5px 0px;
     background-size: 38px;
@@ -41,4 +61,41 @@ html, body{
 .password{
     background: url(../images/password.svg) no-repeat scroll 5px 0px;
     background-size: 38px;
+}
+
+.loginBtn{
+    width: 100%;
+    padding: 10px 20px;
+    text-align: left;
+    color: white;
+    border-radius: 40px;
+    background-color: #f1803e;
+    border: none;
+}
+
+.titlePanel{
+    text-align: center;
+    width: 100%;
+    color: #000;
+    font-weight: 400;
+}
+
+.orange-bar{
+    border-top: 10px solid #f1803e;
+}
+
+.fa-check-circle{
+    color: #0c813c;
+}
+
+.dataTables_length{
+    display: none !important;
+}
+
+.dataTables_info{
+    display: none;
+}
+
+td{
+    text-align: center;
 }

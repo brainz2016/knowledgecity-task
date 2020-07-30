@@ -8,9 +8,17 @@
     </head>
     <body>
         <div class="container"></div>
-        <div class="row">
+        <div class="row main-container" id="main_container">
             <div class="col-lg-12">
-                <div class=""></div>
+                <div class="login-styles">
+                    <img class="logo mb-4" src="images/Logo.svg" alt="KnowledgeCity">
+                    <h6 class="my-0">Welcome to the learning Management System</h6>
+                    <p class="mb-4">Please log in to continue</p>
+                    <input class="login-input username mb-2" type="text" id="username" placeholder="Username">
+                    <input class="login-input password mb-2" type="text" id="password" placeholder="Password">
+                    <input type="checkbox" value="lsRememberMe" id="rememberMe" class="mb-4"> <label for="rememberMe">Remember me</label>
+                    <input type="submit" id="login" class="login" value="Log in">
+                </div>
             </div>
         </div>
     </body>
@@ -19,4 +27,26 @@
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
     <script src="js/functions.js"></script>
+<script src="js/jquery.min.js"></script>
+<script src="js/jquery.ui.shake.js"></script>
+<script>
+$(document).ready(function() 
+{
+
+$('#login').click(function()
+{
+const validUsername = "admin@knowledgecity.com";
+const validPassword = "task2020";
+var username=$("#username").val();
+var password=$("#password").val();
+
+if(username === validUsername && password === validPassword){
+    window.location.href = "/userlist.html";
+}
+else{
+    alert('Wrong Credentials');
+}
+});
+});
+</script>
 </html>
